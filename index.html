@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#7853d8" />
+    <meta
+      name="description"
+      content="夯榜 — 上传图片，拖拽分档，自定义从夯到拉的排行榜。你的喜好，你来排。"
+    />
+    <title>夯榜 · 从夯到拉，你来排</title>
+    <script>
+      (() => {
+        let theme = "light";
+        try {
+          if (localStorage.getItem("hangbang-theme") === "dark") theme = "dark";
+        } catch {}
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === "dark" ? "#111218" : "#f7f8fa";
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

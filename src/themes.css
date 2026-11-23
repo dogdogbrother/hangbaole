@@ -1,0 +1,422 @@
+/* Semantic colors shared by both themes and the smaller UI components. */
+:root {
+  color-scheme: light;
+  --page-bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-subtle: #fcfaff;
+  --text-primary: #282733;
+  --text-secondary: #777180;
+  --text-muted: #9898a5;
+  --border-color: #e9e9ef;
+  --accent-soft: #f3effc;
+  --accent-border: #e8dff6;
+  color: var(--text-primary);
+  background: var(--page-bg);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page-bg: #111218;
+  --surface: #1b1c25;
+  --surface-raised: #242530;
+  --surface-subtle: #171820;
+  --text-primary: #eeeaf5;
+  --text-secondary: #c0bacd;
+  --text-muted: #9793a5;
+  --border-color: #343541;
+  --accent-soft: #2c253e;
+  --accent-border: #51416e;
+  --purple: #bca2f7;
+  --purple-dark: #ceb9ff;
+  --muted: var(--text-muted);
+  --border: var(--border-color);
+  --ink: var(--text-primary);
+  --soft-purple: var(--accent-soft);
+}
+
+:root[data-theme="dark"] ::selection {
+  color: #f6efff;
+  background: #634b91;
+}
+
+:root[data-theme="dark"] :is(button, a, input, select, textarea):focus-visible {
+  outline-color: #b399ee;
+}
+
+:root[data-theme="dark"] .site-header,
+:root[data-theme="dark"] .panel {
+  background: var(--surface);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .panel {
+  box-shadow: 0 3px 12px #00000012;
+}
+
+:root[data-theme="dark"]
+  :is(
+    .main-nav > button,
+    .save-status,
+    .intro-copy > p,
+    .board-meta,
+    .drag-instruction,
+    .board-footer,
+    .name-toggle,
+    .tile-name,
+    .pool-empty-copy > strong,
+    .tier-name-input,
+    .dialog-description,
+    .form-label,
+    .guide-steps p,
+    .howto-card li p
+  ) {
+  color: var(--text-secondary);
+}
+
+:root[data-theme="dark"]
+  :is(
+    .brand-english,
+    .header-stamp,
+    .art-caption,
+    .tier-count,
+    .upload-hint,
+    .pool-empty-copy > span,
+    .workspace-note,
+    .subtle-label,
+    .settings-description,
+    .settings-footnote,
+    .site-footer,
+    .site-footer i,
+    .site-footer > span:first-child,
+    .site-footer > button,
+    .sidebar-signature,
+    .sidebar-signature p,
+    .sidebar-signature > span:last-child
+  ) {
+  color: var(--text-muted);
+}
+
+:root[data-theme="dark"] .main-nav > button:hover,
+:root[data-theme="dark"] .site-footer > button:hover {
+  color: var(--purple);
+}
+
+:root[data-theme="dark"] .status-dot {
+  background: #88cba8;
+  box-shadow: 0 0 0 3px #22382e;
+}
+
+:root[data-theme="dark"]
+  :is(.save-status.saving, .save-status.loading)
+  .status-dot {
+  background: #e4ba7b;
+  box-shadow: 0 0 0 3px #3c3224;
+}
+
+:root[data-theme="dark"] .save-status.error {
+  color: #f0a5ae;
+}
+
+:root[data-theme="dark"] .save-status.error .status-dot {
+  background: #f0a5ae;
+  box-shadow: 0 0 0 3px #41272d;
+}
+
+:root[data-theme="dark"] .header-stamp,
+:root[data-theme="dark"] .intro-art::after {
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .eyebrow,
+:root[data-theme="dark"] .heading-spark,
+:root[data-theme="dark"] .art-spark,
+:root[data-theme="dark"] .signature-mark {
+  color: #a18bbb;
+}
+
+:root[data-theme="dark"] .mini-board {
+  background: var(--surface-raised);
+  border-color: #42404f;
+  box-shadow: 0 5px 20px #00000030;
+}
+
+:root[data-theme="dark"] .mini-board > div {
+  background: var(--surface-subtle);
+}
+
+:root[data-theme="dark"] .mini-board i {
+  background: #5c536b;
+}
+
+:root[data-theme="dark"] .mini-board i:nth-child(3) {
+  background: #756687;
+}
+
+:root[data-theme="dark"] .board-title:hover {
+  background: var(--surface-raised);
+}
+
+:root[data-theme="dark"] .board-title:focus {
+  background: var(--accent-soft);
+  border-color: var(--accent-border);
+}
+
+:root[data-theme="dark"] .recording-mode .board-title[readonly] {
+  background: transparent;
+  border-color: transparent;
+}
+
+:root[data-theme="dark"] .icon-button,
+:root[data-theme="dark"] .section-title > svg,
+:root[data-theme="dark"] .drag-instruction svg,
+:root[data-theme="dark"] .upload-hint > svg,
+:root[data-theme="dark"] .settings-footnote svg {
+  color: var(--text-muted);
+}
+
+:root[data-theme="dark"] .icon-button:hover:not(:disabled) {
+  background: var(--accent-soft);
+  color: var(--purple);
+}
+
+:root[data-theme="dark"] .example-tag,
+:root[data-theme="dark"] .count-badge,
+:root[data-theme="dark"] .howto-icon,
+:root[data-theme="dark"] .guide-steps > div > span {
+  background: var(--accent-soft);
+  color: var(--purple);
+}
+
+:root[data-theme="dark"] .example-tag:hover {
+  background: #3a2e50;
+}
+
+:root[data-theme="dark"] :is(.board-meta > i, .upload-hint > i) {
+  background: #6b637b;
+}
+
+:root[data-theme="dark"] .tier-board,
+:root[data-theme="dark"] .tier-row {
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .tier-row {
+  background: var(--surface-subtle);
+}
+
+:root[data-theme="dark"] .tier-row:nth-child(even) {
+  background: #1d1e27;
+}
+
+:root[data-theme="dark"] .tier-row.drop-active {
+  background: #30273f;
+  box-shadow: inset 0 0 0 2px #a98ce3;
+}
+
+:root[data-theme="dark"] .tile-picture {
+  background: var(--surface-raised);
+  border-color: #ffffff0a;
+  box-shadow: 0 1px 3px #00000022;
+}
+
+:root[data-theme="dark"] .image-tile:hover .tile-picture {
+  box-shadow: 0 3px 12px #00000055;
+}
+
+:root[data-theme="dark"] .recording-mode .tile-picture {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+:root[data-theme="dark"] .empty-tier,
+:root[data-theme="dark"] .empty-tier svg {
+  color: #8c869a;
+}
+
+:root[data-theme="dark"] .ranking-progress strong,
+:root[data-theme="dark"] .howto-card li > span {
+  color: #b49bdb;
+}
+
+:root[data-theme="dark"] .progress-track,
+:root[data-theme="dark"] .switch-track {
+  background: #3b3748;
+}
+
+:root[data-theme="dark"] .switch-track.checked {
+  background: #956edf;
+}
+
+:root[data-theme="dark"] .image-pool.pool-drop-active {
+  background: #262132;
+  border-color: #a98ce3;
+  box-shadow: 0 0 0 2px #a98ce32b;
+}
+
+:root[data-theme="dark"] .button.primary {
+  background: #8459cd;
+  color: #fff;
+  box-shadow: 0 2px 5px #00000020;
+}
+
+:root[data-theme="dark"] .button.primary:hover:not(:disabled) {
+  background: #885ecd;
+  box-shadow: 0 3px 10px #00000030;
+}
+
+:root[data-theme="dark"] .button.secondary {
+  color: var(--text-secondary);
+  background: var(--surface-raised);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .button.secondary:hover {
+  background: #30313e;
+}
+
+:root[data-theme="dark"] .button.danger-ghost {
+  color: #f0a5ae;
+  background: transparent;
+}
+
+:root[data-theme="dark"] .button.danger-ghost:hover,
+:root[data-theme="dark"] .tier-delete:hover:not(:disabled) {
+  background: #41272d;
+  color: #f0a5ae;
+}
+
+:root[data-theme="dark"] .add-image-tile,
+:root[data-theme="dark"] .add-tier-button {
+  background: var(--surface-subtle);
+  border-color: var(--accent-border);
+  color: #bca6d8;
+}
+
+:root[data-theme="dark"] .add-image-tile:hover,
+:root[data-theme="dark"] .add-tier-button:hover:not(:disabled) {
+  background: var(--accent-soft);
+  border-color: #8970b2;
+  color: var(--purple);
+}
+
+:root[data-theme="dark"] .upload-hint,
+:root[data-theme="dark"] .tier-setting-row,
+:root[data-theme="dark"] .settings-footnote,
+:root[data-theme="dark"] .help-link,
+:root[data-theme="dark"] .site-footer {
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .tier-setting-row:focus-within,
+:root[data-theme="dark"] .tier-setting-row.highlighted {
+  background: var(--accent-soft);
+  border-color: #8b6eb8;
+  box-shadow: 0 0 0 2px #a98ce31c;
+}
+
+:root[data-theme="dark"] .settings-footnote {
+  background: var(--surface-subtle);
+}
+
+:root[data-theme="dark"] .howto-card {
+  background: #22202d;
+  border-color: #3b334d;
+}
+
+:root[data-theme="dark"] .howto-heading h2,
+:root[data-theme="dark"] .howto-card li strong,
+:root[data-theme="dark"] .guide-steps h3 {
+  color: #d4c4ea;
+}
+
+:root[data-theme="dark"] .help-link {
+  color: #baa4d2;
+}
+
+:root[data-theme="dark"] .help-link:hover {
+  color: var(--purple);
+}
+
+:root[data-theme="dark"] .loading-state {
+  background: #111218f2;
+  color: var(--text-secondary);
+}
+
+:root[data-theme="dark"] .loading-spinner {
+  border-color: #443853;
+  border-top-color: var(--purple);
+}
+
+:root[data-theme="dark"] .dialog-overlay {
+  background: #05050bad;
+}
+
+:root[data-theme="dark"] .dialog {
+  background: var(--surface);
+  border-color: var(--border-color);
+  box-shadow: 0 22px 90px #00000066;
+}
+
+:root[data-theme="dark"] .dialog-eyebrow {
+  color: #b49bd2;
+}
+
+:root[data-theme="dark"] .image-edit-preview {
+  background: repeating-conic-gradient(#292733 0% 25%, #211f29 0% 50%) 50% /
+    16px 16px;
+}
+
+:root[data-theme="dark"] .form-input {
+  color: var(--text-primary);
+  background: var(--surface-subtle);
+  border-color: #494252;
+}
+
+:root[data-theme="dark"] .form-input::placeholder {
+  color: var(--text-muted);
+}
+
+:root[data-theme="dark"] .form-input:focus {
+  border-color: #b399ee;
+  box-shadow: 0 0 0 3px #b399ee20;
+}
+
+:root[data-theme="dark"] .delete-dialog-icon {
+  background: #41272d;
+  color: #f0a5ae;
+}
+
+:root[data-theme="dark"] .guide-privacy {
+  background: var(--surface-raised);
+  color: var(--text-secondary);
+}
+
+:root[data-theme="dark"] .toast-message {
+  background: #302a3e;
+  color: #eeeaf5;
+  border-color: #675475;
+  box-shadow: 0 5px 22px #00000044;
+}
+
+:root[data-theme="dark"] .recording-toggle {
+  background: var(--accent-soft);
+  border-color: var(--accent-border);
+}
+
+:root[data-theme="dark"] .recording-toggle:hover:not(:disabled) {
+  background: #3a2e50;
+  border-color: #8b6eb8;
+}
+
+:root[data-theme="dark"] .recording-exit {
+  background: #242530f2;
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .recording-exit kbd {
+  color: var(--text-muted);
+  border-color: #484052;
+}
